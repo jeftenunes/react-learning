@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
-import StateInput from '../src/StateInput';
+import Incrementor from '../src/Incrementor';
 
 class HelloWorld extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            name: 'Jéfte'
+            value: this.props.value
         };
     }
 
     render() {
-        const style = {
-            color: '#FF0000',
-            fontSize: 50
-          };
-      
-
         return (
             <div className="HelloWord">
-                <h1 style={style}>
-                    Hello, World!
-                </h1>
-                <span>{this.state.name}</span>
-                <StateInput />
+                <h1>{this.state.txt}</h1>
+                <Incrementor value={0}/>
             </div>
         );
     }
